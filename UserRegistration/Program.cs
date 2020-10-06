@@ -19,6 +19,9 @@ namespace UserRegistration
             Console.WriteLine("Enter Your Mobile Number");
             string mobileNum = Console.ReadLine();
             Console.WriteLine(regexValidation.ValidateMobile(mobileNum));
+            Console.WriteLine("Enter Your Password");
+            string password = Console.ReadLine();
+            Console.WriteLine(regexValidation.ValidatePassword(password));
         }
     }
 }
