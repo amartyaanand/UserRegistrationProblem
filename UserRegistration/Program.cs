@@ -6,7 +6,10 @@ namespace UserRegistration
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to User Registration Problem.");
+            RegexValidation regexValidation = new RegexValidation();
+            Console.WriteLine("Enter Your First Name");
+            string firstName = Console.ReadLine();
+            Console.WriteLine(regexValidation.ValidateFirstName(firstName));
         }
     }
 }
