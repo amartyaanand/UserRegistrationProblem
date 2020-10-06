@@ -16,6 +16,9 @@ namespace UserRegistration
             Console.WriteLine("Enter Your Email Address");
             string email = Console.ReadLine();
             Console.WriteLine(regexValidation.ValidateEmail(email));
+            Console.WriteLine("Enter Your Mobile Number");
+            string mobileNum = Console.ReadLine();
+            Console.WriteLine(regexValidation.ValidateMobile(mobileNum));
         }
     }
 }
