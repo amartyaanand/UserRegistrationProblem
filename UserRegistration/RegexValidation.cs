@@ -15,23 +15,38 @@ namespace UserRegistration
         public const string REGEX_PASSWORD = "^(?=.*[A-Z])(?=.*\\d)(?=[\\w]*[\\W][\\w]*$)[\\S]{8,}$";
         public bool ValidateFirstName(string firstName)
         {
-            return Regex.IsMatch(firstName, REGEX_FIRSTNAME);
+            if (Regex.IsMatch(firstName, REGEX_FIRSTNAME))
+                return true;
+            else
+                throw new InvalidUserDetailException(InvalidUserDetailException.ExceptionType.INVALID_FIRSTNAME, "Invalid First Name");
         }
         public bool ValidateLastName(string lastName)
         {
-            return Regex.IsMatch(lastName, REGEX_LASTNAME);
+            if (Regex.IsMatch(lastName, REGEX_LASTNAME))
+                return true;
+            else
+                throw new InvalidUserDetailException(InvalidUserDetailException.ExceptionType.INVALID_LASTNAME, "Invalid Last Name");
         }
         public bool ValidateEmail(string email)
         {
-            return Regex.IsMatch(email, REGEX_EMAIL);
+            if (Regex.IsMatch(email, REGEX_EMAIL))
+                return true;
+            else
+                throw new InvalidUserDetailException(InvalidUserDetailException.ExceptionType.INVALID_EMAIL, "Invalid Email");
         }
         public bool ValidateMobile(string mobileNum)
         {
-            return Regex.IsMatch(mobileNum, REGEX_MOBILENUMBER);
+            if (Regex.IsMatch(mobileNum, REGEX_MOBILENUMBER))
+                return true;
+            else
+                throw new InvalidUserDetailException(InvalidUserDetailException.ExceptionType.INVALID_MOBILE, "Invalid Mobile Number");
         }
         public bool ValidatePassword(string password)
         {
-            return Regex.IsMatch(password, REGEX_PASSWORD);
+            if (Regex.IsMatch(password, REGEX_PASSWORD))
+                return true;
+            else
+                throw new InvalidUserDetailException(InvalidUserDetailException.ExceptionType.INVALID_PASSWORD, "Invalid Password");
         }
     }
 }
