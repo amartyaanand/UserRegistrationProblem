@@ -37,7 +37,7 @@ namespace UserRegistrationTest
         [TestMethod]
         public void GivenEmailId_WhenValidate_ShouldReturnTrue()
         {
-            string email = "amartya0123@gmail.com";
+            string email = "amartya012@gmail.com";
             //Act
             bool result = user.ValidateEmail(email);
             //Assert
