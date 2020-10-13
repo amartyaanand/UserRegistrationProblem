@@ -19,7 +19,7 @@ namespace UserRegistrationTest
         [TestMethod]
         public void GivenUserFistName_WhenValidate_ShouldReturnTrue()
         {
-            string firstName = "Swapnil";
+            string firstName = "Amartya";
             //Act
             bool result = user.ValidateFirstName(firstName);
             //Assert
@@ -28,7 +28,7 @@ namespace UserRegistrationTest
         [TestMethod]
         public void GivenUserLastName_WhenValidate_ShouldReturnTrue()
         {
-            string lastName = "Chakravarti";
+            string lastName = "Anand";
             //Act
             bool result = user.ValidateFirstName(lastName);
             //Assert
@@ -37,7 +37,7 @@ namespace UserRegistrationTest
         [TestMethod]
         public void GivenEmailId_WhenValidate_ShouldReturnTrue()
         {
-            string email = "schakravarti930@gmail.com";
+            string email = "amartya012@gmail.com";
             //Act
             bool result = user.ValidateEmail(email);
             //Assert
@@ -46,7 +46,7 @@ namespace UserRegistrationTest
         [TestMethod]
         public void GivenMobileNumber_WhenValidate_ShouldReturnTrue()
         {
-            string mobileNumber = "91 9131942446";
+            string mobileNumber = "91 9876543210";
             //Act
             bool result = user.ValidateMobile(mobileNumber);
             //Assert
@@ -57,7 +57,7 @@ namespace UserRegistrationTest
         {
             //Arrange
 
-            string password = "Swapnil$232";
+            string password = "Amartya$232";
             //Act
             bool result = user.ValidatePassword(password);
             //Assert
@@ -69,7 +69,7 @@ namespace UserRegistrationTest
         {
             try
             {
-                string firstName = "swapnil";
+                string firstName = "amartya";
                 bool result = user.ValidateFirstName(firstName);
             }
             catch (InvalidUserDetailException e)
@@ -82,7 +82,7 @@ namespace UserRegistrationTest
         {
             try
             {
-                string lastName = "chakravarti";
+                string lastName = "anand";
                 bool result = user.ValidateLastName(lastName);
             }
             catch (InvalidUserDetailException e)
@@ -95,7 +95,7 @@ namespace UserRegistrationTest
         {
             try
             {
-                string email = "Swapnil.Chakravarti.com";
+                string email = "Amartya.Anand.com";
                 bool result = user.ValidateEmail(email);
             }
             catch (InvalidUserDetailException e)
@@ -121,7 +121,7 @@ namespace UserRegistrationTest
         {
             try
             {
-                string password = "swapnil@123*";
+                string password = "amartya@123*";
                 bool result = user.ValidatePassword(password);
             }
             catch (InvalidUserDetailException e)
