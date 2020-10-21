@@ -13,40 +13,10 @@ namespace UserRegistration
         public const string REGEX_MOBILENUMBER = "^[1-9]{1}[0-9]{0,3}\\s[1-9]{1}[0-9]{9}$";
         //  \S matches any non-whitespace character
         public const string REGEX_PASSWORD = "^(?=.*[A-Z])(?=.*\\d)(?=[\\w]*[\\W][\\w]*$)[\\S]{8,}$";
-        public bool ValidateFirstName(string firstName)
-        {
-            if (Regex.IsMatch(firstName, REGEX_FIRSTNAME))
-                return true;
-            else
-                throw new InvalidUserDetailException(InvalidUserDetailException.ExceptionType.INVALID_FIRSTNAME, "Invalid First Name");
-        }
-        public bool ValidateLastName(string lastName)
-        {
-            if (Regex.IsMatch(lastName, REGEX_LASTNAME))
-                return true;
-            else
-                throw new InvalidUserDetailException(InvalidUserDetailException.ExceptionType.INVALID_LASTNAME, "Invalid Last Name");
-        }
-        public bool ValidateEmail(string email)
-        {
-            if (Regex.IsMatch(email, REGEX_EMAIL))
-                return true;
-            else
-                throw new InvalidUserDetailException(InvalidUserDetailException.ExceptionType.INVALID_EMAIL, "Invalid Email");
-        }
-        public bool ValidateMobile(string mobileNum)
-        {
-            if (Regex.IsMatch(mobileNum, REGEX_MOBILENUMBER))
-                return true;
-            else
-                throw new InvalidUserDetailException(InvalidUserDetailException.ExceptionType.INVALID_MOBILE, "Invalid Mobile Number");
-        }
-        public bool ValidatePassword(string password)
-        {
-            if (Regex.IsMatch(password, REGEX_PASSWORD))
-                return true;
-            else
-                throw new InvalidUserDetailException(InvalidUserDetailException.ExceptionType.INVALID_PASSWORD, "Invalid Password");
-        }
+        public bool ValidateFirstName(string firstName) => (Regex.IsMatch(firstName, REGEX_FIRSTNAME));
+        public bool ValidateLastName(string lastName) => (Regex.IsMatch(lastName, REGEX_LASTNAME));
+        public bool ValidateEmail(string email) => (Regex.IsMatch(email, REGEX_EMAIL));
+        public bool ValidateMobile(string mobNumber) => (Regex.IsMatch(mobNumber, REGEX_MOBILENUMBER));
+        public bool ValidatePassword(string password) => (Regex.IsMatch(password, REGEX_PASSWORD));
     }
 }
